@@ -56,6 +56,7 @@ if os.path.exists(identitypath):
   print("Loading identity")
 else:
   print("No identity found")
+  sys.exit("Program uses NomadNet identity, please create one.")
 
 L = LXMF.LXMRouter(identity = ID, storagepath = userdir+"/RangeMap")
 L_dest = L.register_delivery_identity(ID,display_name = displayname)
